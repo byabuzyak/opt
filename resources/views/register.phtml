@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Register</title>
+</head>
+<body>
+<form action="/register" method="POST">
+    <?php if (!empty($errors)): ?>
+        <ul>
+            <?php foreach ($errors as $field => $error): ?>
+                <li><?=$error?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+    <label for="email">Name:</label>
+    <input id="email" type="text" name="name" placeholder="Name"/>
+    <br>
+    <label for="email">Email:</label>
+    <input id="email" type="text" name="email" placeholder="Email address"/>
+    <br>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" placeholder="Password"/>
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>

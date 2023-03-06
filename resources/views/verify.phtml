@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+<form action="/verify" method="POST">
+    <?php
+    if (!empty($errors)): ?>
+        <ul>
+            <?php foreach ($errors as $field => $error): ?>
+                <li><?=$error?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+
+    <label for="password">Verification code:</label>
+    <input type="hidden" name="email" value="<?=$email?>">
+    <input id="password" type="number" name="code" placeholder="Verification code"/>
+
+    <input type="submit">
+</form>
+</body>
+</html>
